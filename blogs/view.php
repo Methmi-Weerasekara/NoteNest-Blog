@@ -524,7 +524,7 @@ if (isset($_SESSION["user_id"])) {
 
                     <div class="no-comments">
 
-                        <div>💬</div>
+                        <div></div>
 
                         <h3>No comments yet</h3>
 

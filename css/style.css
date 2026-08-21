@@ -11,16 +11,16 @@
 
 :root {
 
-    --primary: #4f46e5;
-    --primary-dark: #4338ca;
+    --primary: #8D6E63;
+    --primary-dark: #5D4037;
 
-    --background: #f8fafc;
-    --surface: #ffffff;
+    --background: #fff9ee;
+    --surface: #FFFDF8;
 
-    --text: #1e293b;
-    --muted: #64748b;
+    --text: #3E2723;
+    --muted: #795548;
 
-    --border: #e2e8f0;
+    --border: #EAE6DF;
 
     --success: #16a34a;
     --danger: #dc2626;
@@ -84,7 +84,7 @@ a {
    ===================================================== */
 
 .site-header {
-    background: white;
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
 
     position: sticky;
@@ -299,8 +299,7 @@ a {
     padding: 8px;
 
     box-shadow:
-        0 12px 30px
-        rgba(15, 23, 42, 0.12);
+        0 12px 30px rgba(15, 23, 42, 0.12);
 
 }
 
@@ -357,7 +356,7 @@ a {
 
 
 
-  
+
 
 /* Welcome */
 
@@ -591,11 +590,9 @@ select:focus {
     border-radius: 18px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #eef2ff,
-            #f8fafc
-        );
+            #f8fafc);
 
 }
 
@@ -660,8 +657,7 @@ select:focus {
     transform: translateY(-4px);
 
     box-shadow:
-        0 12px 30px
-        rgba(15, 23, 42, 0.08);
+        0 12px 30px rgba(15, 23, 42, 0.08);
 
 }
 
@@ -927,12 +923,10 @@ select:focus {
     padding: 65px 20px 55px;
     text-align: center;
 
-    background: linear-gradient(
-        135deg,
-        #bbf7d0 0%,
-        #d9f99d 50%,
-        #fde68a 100%
-    );
+    background: linear-gradient(135deg,
+            #bbf7d0 0%,
+            #d9f99d 50%,
+            #fde68a 100%);
 
     border: 1px solid #cce8a8;
 
@@ -941,6 +935,7 @@ select:focus {
     box-shadow:
         0 14px 35px rgba(101, 130, 50, 0.12);
 }
+
 .hero-label {
     display: inline-block;
 
@@ -978,6 +973,7 @@ select:focus {
 
     line-height: 1.7;
 }
+
 .hero-content p {
     max-width: 600px;
 
@@ -989,6 +985,7 @@ select:focus {
 
     line-height: 1.7;
 }
+
 .hero-content h1 {
     margin-bottom: 15px;
 
@@ -1010,6 +1007,7 @@ select:focus {
 
     line-height: 1.7;
 }
+
 .hero-label {
     display: inline-block;
 
@@ -1077,8 +1075,7 @@ select:focus {
     border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px
-        rgba(79, 70, 229, 0.1);
+        0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .search-form button {
@@ -1190,6 +1187,7 @@ select:focus {
 
     font-size: 13px;
 }
+
 /* =====================================================
    RESPONSIVE DESIGN
    ===================================================== */
@@ -1297,74 +1295,76 @@ select:focus {
         right: -10px;
 
     }
-.editor-page {
-    padding: 30px 15px;
+
+    .editor-page {
+        padding: 30px 15px;
+    }
+
+    .editor-container {
+        padding: 28px 20px;
+        border-radius: 14px;
+    }
+
+    .editor-header h1 {
+        font-size: 25px;
+    }
+
+    .editor-actions {
+        flex-direction: column-reverse;
+    }
+
+    .editor-actions a,
+    .editor-actions button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .view-page {
+        padding: 35px 15px;
+    }
+
+    .note-header h1 {
+        font-size: 29px;
+    }
+
+    .note-content {
+        padding: 24px 20px;
+
+        font-size: 15px;
+    }
+
+    .note-actions {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .owner-actions {
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .comment-form-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .comment-btn {
+        width: 100%;
+    }
 }
 
-.editor-container {
-    padding: 28px 20px;
-    border-radius: 14px;
-}
-
-.editor-header h1 {
-    font-size: 25px;
-}
-
-.editor-actions {
-    flex-direction: column-reverse;
-}
-
-.editor-actions a,
-.editor-actions button {
-    width: 100%;
-    text-align: center;
-}
-
-.view-page {
-    padding: 35px 15px;
-}
-
-.note-header h1 {
-    font-size: 29px;
-}
-
-.note-content {
-    padding: 24px 20px;
-
-    font-size: 15px;
-}
-
-.note-actions {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 15px;
-}
-
-.owner-actions {
-    width: 100%;
-}
-
-.edit-btn,
-.delete-btn {
-    flex: 1;
-
-    text-align: center;
-}
-
-.comment-form-footer {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-.comment-btn {
-    width: 100%;
-}
-}
 /* =====================================================
    PROFILE DROPDOWN - FINAL OVERRIDE
    ===================================================== */
@@ -1432,6 +1432,7 @@ select:focus {
 .dropdown-menu .dropdown-logout {
     color: var(--danger);
 }
+
 /* =====================================================
    AUTHENTICATION PAGES
    ===================================================== */
@@ -1466,8 +1467,7 @@ select:focus {
     padding: 40px;
 
     box-shadow:
-        0 15px 40px
-        rgba(15, 23, 42, 0.08);
+        0 15px 40px rgba(15, 23, 42, 0.08);
 }
 
 
@@ -1535,6 +1535,7 @@ select:focus {
 
     border: 1px solid #fecaca;
 }
+
 .auth-message.success {
     background: #f0fdf4;
 
@@ -1595,8 +1596,7 @@ select:focus {
     outline: none;
 
     box-shadow:
-        0 0 0 3px
-        rgba(79, 70, 229, 0.1);
+        0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 
@@ -1698,6 +1698,7 @@ select:focus {
 .auth-footer a:hover {
     text-decoration: underline;
 }
+
 /* =====================================================
    NOTE EDITOR
    ===================================================== */
@@ -1723,8 +1724,7 @@ select:focus {
     padding: 42px;
 
     box-shadow:
-        0 15px 40px
-        rgba(15, 23, 42, 0.07);
+        0 15px 40px rgba(15, 23, 42, 0.07);
 }
 
 
@@ -1872,8 +1872,7 @@ select:focus {
     border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px
-        rgba(79, 70, 229, 0.1);
+        0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 
@@ -1978,6 +1977,7 @@ select:focus {
 
     transform: translateY(-1px);
 }
+
 /* =====================================================
    NOTE VIEW PAGE
    ===================================================== */
@@ -2104,8 +2104,7 @@ select:focus {
     white-space: normal;
 
     box-shadow:
-        0 10px 30px
-        rgba(15, 23, 42, 0.04);
+        0 10px 30px rgba(15, 23, 42, 0.04);
 }
 
 
@@ -2183,6 +2182,7 @@ select:focus {
     font-size: 13px;
     font-weight: 600;
 }
+
 .owner-actions {
     display: flex;
 
@@ -2321,8 +2321,7 @@ select:focus {
     border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px
-        rgba(79, 70, 229, 0.1);
+        0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .comment-form-footer {

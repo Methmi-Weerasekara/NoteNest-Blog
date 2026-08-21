@@ -137,7 +137,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
             <?php else: ?>
 
-                <a
+                <a style="margin-right: 20px"
                     href="<?php echo BASE_URL; ?>/auth/login.php"
                     class="login-link"
                 >
