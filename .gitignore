@@ -1,0 +1,26 @@
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Development / OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Composer / Dependencies
+/vendor/
+node_modules/
+
+# Logs
+*.log
+error_log
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Antigravity specific
+.antigravityignore
