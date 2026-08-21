@@ -1,0 +1,5 @@
+# Prevent access to .env and .gitignore files
+<FilesMatch "^\.env|\.gitignore|\.antigravityignore">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

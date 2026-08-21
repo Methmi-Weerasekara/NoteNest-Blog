@@ -11,19 +11,26 @@ $isLocalhost = (
     strpos($httpHost, '::1') !== false
 );
 
+// Load environment variables from .env if it exists
+$envFile = __DIR__ . '/../.env';
+$env = [];
+if (file_exists($envFile)) {
+    $env = parse_ini_file($envFile);
+}
+
 if ($isLocalhost) {
     // Localhost (XAMPP) Database Settings
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "notenest";
-    define('BASE_URL', '/NoteNest');
+    $host = $env['DB_HOST_LOCAL'] ?? "localhost";
+    $username = $env['DB_USER_LOCAL'] ?? "root";
+    $password = $env['DB_PASS_LOCAL'] ?? "";
+    $database = $env['DB_NAME_LOCAL'] ?? "notenest";
+    define('BASE_URL', $env['BASE_URL'] ?? '/NoteNest');
 } else {
-    // InfinityFree Database Settings (Replace with your actual vPanel MySQL details)
-    $host = "sql102.infinityfree.com";     // e.g., sql300.infinityfree.com
-    $username = "if0_42711415";            // e.g., if0_38123456
-    $password = "aT4HVotkvVAnQy";     // Your InfinityFree Account Password
-    $database = "if0_42711415_notenest_db";   // e.g., if0_38123456_notenest
+    // InfinityFree Database Settings
+    $host = $env['DB_HOST_PROD'] ?? "sql102.infinityfree.com";
+    $username = $env['DB_USER_PROD'] ?? "if0_42711415";
+    $password = $env['DB_PASS_PROD'] ?? "aT4HVotkvVAnQy";
+    $database = $env['DB_NAME_PROD'] ?? "if0_42711415_notenest_db";
     define('BASE_URL', '');
 }
 
