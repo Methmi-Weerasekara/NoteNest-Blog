@@ -43,7 +43,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 href="<?php echo BASE_URL; ?>/index.php"
                 class="logo"
             >
-                <span class="logo-icon">📚</span>
+                <span class="logo-icon"></span>
                 <span>NoteNest</span>
             </a>
 
