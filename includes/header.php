@@ -64,6 +64,16 @@ if (session_status() === PHP_SESSION_NONE) {
                 </a>
 
             <?php endif; ?>
+            <?php if (
+    isset($_SESSION["role"]) &&
+    $_SESSION["role"] === "admin"
+): ?>
+
+    <a href="/NoteNest/admin/index.php">
+        Admin Dashboard
+    </a>
+
+<?php endif; ?>
 
         </div>
 
